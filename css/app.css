@@ -647,6 +647,7 @@ section[id] {
 
 .review {
   padding-bottom: 190px;
+  overflow-x: hidden;
 }
 .review-header {
   max-width: 500px;
