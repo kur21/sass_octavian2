@@ -1,0 +1,56 @@
+.experience {
+   padding-bottom: 200px;
+   &-main {
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0 50px;
+   }
+   &-year {
+      position: relative;
+      z-index: 2;
+      background: url(../images/img7.png) no-repeat center / 140%; 
+      background-clip: text;
+      -moz-background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+   }
+   &-number {
+      text-align: center;
+      font-size: 400px;
+      font-weight: 800;
+      position: relative;
+      flex: 1;
+   }
+   &-dots {
+      position: absolute;
+      top: 50%;
+      right: 0;
+   }
+   &-content {
+      max-width: 470px;
+      margin-left: auto;
+      flex-shrink: 0;
+   }
+   @include maxWidth(1599px) {
+      padding-bottom: 150px;
+   }
+   @include maxWidth(1023px) {
+      &-main {
+         flex-direction: column;
+         gap: 40px 0;
+      }
+      &-content {
+         margin: 0 auto;
+         text-align: center;
+         position: relative;
+         z-index: 2;
+      }
+      &-number {
+         font-size: 200px;
+      }
+   }
+   @include maxWidth(767px) {
+      padding-bottom: 80px;
+   }
+}

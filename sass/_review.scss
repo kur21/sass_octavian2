@@ -1,0 +1,70 @@
+.review {
+   padding-bottom: 190px;
+   &-header {
+      max-width: 500px;
+      margin: 0 auto 90px;
+      text-align: center;
+   }
+   &-item {
+      max-width: 840px;
+      margin: 0 auto;
+      border-radius: 10px;
+      text-align: center;
+      display:flex;
+      align-items:center;
+      flex-direction:column;
+      box-shadow: 0px 40px 46px rgba(40, 47, 58, .5);
+      padding: 70px 100px;
+      position: relative;
+      opacity: 0.3;
+      transition: opacity 0.2s ease-in-out;     
+   }
+   &-icon {
+     position: absolute;
+     top: 0;
+     left: 50%;
+     transform: translate(-50%,-50%);
+   }
+   &-desc {
+      color: #eeee;
+      font-size: 30px;
+      line-height: lineH(48, 30);
+      margin-bottom: 40px;
+   }
+   &-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 100rem;
+      object-fit: cover;
+      margin: 0 auto 20px;
+   }
+   @include maxWidth(1599px) {
+      padding-bottom: 150px;
+   }
+   @include maxWidth(1023px) {
+      &-item {
+         max-width: 700px;
+      }
+   }
+   @include maxWidth(767px) {
+      padding-bottom: 80px;
+      &-item {
+         max-width: 350px;
+         padding: 50px 25px;
+      }
+      &-desc {
+         font-size: 18px;
+         margin-bottom: 20px;
+      }
+      &-avatar {
+         width: 50px;
+         height: 50px;
+      }
+   }
+}
+.review-list .slick-list {
+   overflow: unset;
+}
+.review-item.slick-active {
+   opacity: 1;
+}

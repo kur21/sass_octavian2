@@ -1,0 +1,135 @@
+.footer {
+   &-column {
+      color: $gray-footer;
+   }
+   &-top {
+      padding: 450px 0 150px;
+      background-color: $gray-dark;
+   }
+   &-main {
+      display: grid;
+      grid-template-columns: 4fr 3fr 4fr;
+      grid-gap: 0 130px;
+   }
+   &-logo {
+      display: inline-block;
+      margin-bottom: 40px;
+   }
+   &-desc {
+      font-size: 16px;
+      margin-bottom: 40px;
+      line-height: 30px;
+   }
+   .social {
+      display: flex;
+      align-items: center;
+      gap: 0 36px;
+   }
+   .social-item {
+      transition: color .2s linear;
+      &:hover {
+         color: white;
+      }
+   }
+   &-heading {
+      font-size: 18px;
+      color: white;
+      margin-bottom: 40px;
+      font-weight: bold;
+   }
+   &-item:not(:last-child) {
+      margin-bottom: 30px;
+   }
+   &-link {
+      display: inline-block;
+      transition: all .3s ease-in-out;
+      &:hover {
+         color: white;
+         transform: translateX(5px);
+      }
+   }
+   &-info {
+      margin-bottom: 40px;
+      li {
+         margin-bottom: 14px;
+      }
+      p {
+         line-height: 30px;
+      }
+   }
+   &-highlight {
+      color: white;
+   }
+   &-bottom {
+      background-color: $gray-darker;
+      line-height: 1.6;
+      a {
+         color: white;
+      }
+   }
+   &-container {
+      color: $gray-footer;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      position: relative;
+   }
+   &-rocket {
+      width: 65px;
+      height: 65px;
+      border-radius: 5px;
+      background-image: linear-gradient(to top, #f66767, #f68826);
+      color: white;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateY(-50%);
+      z-index: 2;
+   }
+   @include maxWidth(1279px) {
+      &-main {
+         grid-template-columns: 4fr 3fr 5fr;
+         grid-gap: 0 100px;
+      }
+   }
+   @include maxWidth(1023px) {
+      &-top {
+         padding: 400px 0 100px;
+      }
+      &-main {
+         grid-template-columns: 4fr 3fr 6fr;
+         grid-gap: 0 30px;
+      }
+      &-rocket {
+         right: 20px;
+      }
+   }
+   @include maxWidth(767px) {
+      &-top {
+         padding: 300px 0 50px;
+      }
+      &-main {
+         grid-template-columns: 1fr;
+         grid-gap: 50px 0;
+      }
+      &-column {
+         text-align: center;
+      }
+      .social {
+         justify-content: center;
+      }
+      &-container {
+         padding-top: 30px;
+         padding-bottom: 30px;
+         text-align: center;
+      }
+      &-rocket {
+         width: 50px;
+         height: 50px;
+         right: 15px;
+      }
+   }
+}
